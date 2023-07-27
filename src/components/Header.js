@@ -9,8 +9,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="navbarColor01" />
         <Navbar.Collapse id="navbarColor01">
           <Nav className="me-auto">
-            <Nav.Link href="/" active>Home</Nav.Link>
-            <Nav.Link href="PeriodCal">Period Calculator</Nav.Link>
+            <Nav.Link href="/" >Home</Nav.Link>
             <Nav.Link href="Pregnancy">Pregnancy</Nav.Link>
             <Nav.Link href="About">About</Nav.Link>
             <NavDropdown title="Maternal Health" id="nav-dropdown">

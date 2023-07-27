@@ -1,5 +1,3 @@
-// medPersonnelContact.js
-
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.cjs');
 const User = require('./userModel.cjs');
@@ -15,8 +13,8 @@ const MedPersonnelContact  = sequelize.define('med_personel_contact', {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
-      model: User, // This is referencing the User model
-      key: 'id', // This is referencing the primary key (id) of the User model
+      model: User, 
+      key: 'id', 
     },
   },
   name: {
@@ -29,8 +27,8 @@ const MedPersonnelContact  = sequelize.define('med_personel_contact', {
   },
 }, {
   tableName: 'med_personel_contact',
-  timestamps: false, // If you want timestamps for created_at and updated_at columns
-  underscored: true, // Use snake_case for column names
+  timestamps: false, 
+  underscored: true, 
 });
 
 // Define association between MedPersonnelContact and User models

@@ -81,7 +81,7 @@ const Settings = () => {
               <Button variant="link" onClick={openModal}>
                 <FontAwesomeIcon icon={faPlus} size="2x" />
               </Button>
-              <h5 className="card-title">Medical Personnel Phones</h5>
+              <h5 className="card-title">Medical Personnel Contact</h5>
             </div>
             <div className="card-body">
                 <FontAwesomeIcon icon={faPhone} /> Grace Dennis <br></br>08093810206

@@ -1,5 +1,3 @@
-// remainderSetting.js
-
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.cjs');
 const User = require('../models/userModel.cjs');
@@ -15,8 +13,8 @@ const RemainderSetting = sequelize.define('remainder_setting', {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
-      model: User, // This is referencing the User model
-      key: 'id', // This is referencing the primary key (id) of the User model
+      model: User, 
+      key: 'id', 
     },
   },
   days_in_adv: {
@@ -29,8 +27,8 @@ const RemainderSetting = sequelize.define('remainder_setting', {
   },
 }, {
   tableName: 'remainder_settings',
-  timestamps: false, // If you want timestamps for created_at and updated_at columns
-  underscored: true, // Use snake_case for column names
+  timestamps: false, 
+  underscored: true, 
 });
 
 // Define association between RemainderSetting and User models

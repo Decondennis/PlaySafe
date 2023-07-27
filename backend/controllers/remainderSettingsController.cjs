@@ -1,11 +1,8 @@
-// remainderSettingsController.js
-
 const express = require('express');
 const router = express.Router();
 const remainderSettingModel = require('../models/remainderSettingModel.cjs');
 
 
-// Create a new remainder setting
 router.post('/remainder-settings', async (req, res) => {
   try {
     const { user_id, days_in_adv, time } = req.body;
@@ -17,7 +14,6 @@ router.post('/remainder-settings', async (req, res) => {
   }
 });
 
-// Get all remainder settings
 router.get('/remainder-settings', async (req, res) => {
   try {
     const settings = await RemainderSetting.findAll();
@@ -28,7 +24,6 @@ router.get('/remainder-settings', async (req, res) => {
   }
 });
 
-// Get a single remainder setting by ID
 router.get('/remainder-settings/:id', async (req, res) => {
   try {
     const settingId = req.params.id;
@@ -43,7 +38,6 @@ router.get('/remainder-settings/:id', async (req, res) => {
   }
 });
 
-// Update a remainder setting by ID
 router.put('/remainder-settings/:id', async (req, res) => {
   try {
     const settingId = req.params.id;
@@ -63,7 +57,6 @@ router.put('/remainder-settings/:id', async (req, res) => {
   }
 });
 
-// Delete a remainder setting by ID
 router.delete('/remainder-settings/:id', async (req, res) => {
   try {
     const settingId = req.params.id;

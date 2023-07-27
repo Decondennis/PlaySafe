@@ -1,10 +1,8 @@
-// antenatalReminderController.js
-
 const express = require('express');
 const router = express.Router();
 const AntenatalReminder = require('../models/antenatalReminderModel.cjs');
 
-// Create a new antenatal reminder entry
+
 router.post('/antenatal-reminders', async (req, res) => {
   try {
     const { user_id, appointment_date, time } = req.body;
@@ -16,7 +14,6 @@ router.post('/antenatal-reminders', async (req, res) => {
   }
 });
 
-// Get all antenatal reminder entries
 router.get('/antenatal-reminders', async (req, res) => {
   try {
     const reminders = await AntenatalReminder.findAll();
@@ -27,7 +24,7 @@ router.get('/antenatal-reminders', async (req, res) => {
   }
 });
 
-// Get a single antenatal reminder entry by ID
+
 router.get('/antenatal-reminders/:id', async (req, res) => {
   try {
     const reminderId = req.params.id;
@@ -42,7 +39,6 @@ router.get('/antenatal-reminders/:id', async (req, res) => {
   }
 });
 
-// Update an antenatal reminder entry by ID
 router.put('/antenatal-reminders/:id', async (req, res) => {
   try {
     const reminderId = req.params.id;
@@ -62,7 +58,7 @@ router.put('/antenatal-reminders/:id', async (req, res) => {
   }
 });
 
-// Delete an antenatal reminder entry by ID
+
 router.delete('/antenatal-reminders/:id', async (req, res) => {
   try {
     const reminderId = req.params.id;

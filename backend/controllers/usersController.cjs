@@ -1,10 +1,8 @@
-// usersController.js
-
 const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel.cjs');
 
-// Create a new user
+
 router.post('/users', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -16,7 +14,7 @@ router.post('/users', async (req, res) => {
   }
 });
 
-// Get all users
+
 router.get('/users', async (req, res) => {
   try {
     const users = await User.findAll();
@@ -27,7 +25,6 @@ router.get('/users', async (req, res) => {
   }
 });
 
-// Get a single user by ID
 router.get('/users/:id', async (req, res) => {
   try {
     const userId = req.params.id;
@@ -42,7 +39,6 @@ router.get('/users/:id', async (req, res) => {
   }
 });
 
-// Update a user by ID
 router.put('/users/:id', async (req, res) => {
   try {
     const userId = req.params.id;
@@ -61,7 +57,6 @@ router.put('/users/:id', async (req, res) => {
   }
 });
 
-// Delete a user by ID
 router.delete('/users/:id', async (req, res) => {
   try {
     const userId = req.params.id;

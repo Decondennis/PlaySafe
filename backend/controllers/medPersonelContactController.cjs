@@ -1,12 +1,7 @@
-// medPersonelContactController.js
-
 const express = require('express');
 const router = express.Router();
 const MedPersonelContact = require('../models/medPersonelContactModel.cjs');
 
-
-
-// Create a new medical personnel contact entry
 router.post('/med_personel_contacts', async (req, res) => {
   try {
     const { user_id, name, phone } = req.body;
@@ -18,7 +13,6 @@ router.post('/med_personel_contacts', async (req, res) => {
   }
 });
 
-// Get all medical personnel contact entries
 router.get('/med-personel-contacts', async (req, res) => {
   try {
     const contacts = await MedPersonelContact.findAll();
@@ -64,7 +58,7 @@ router.put('/med_personel_contacts/:id', async (req, res) => {
   }
 });
 
-// Delete a medical personnel contact entry by ID
+
 router.delete('/med_personel_contacts/:id', async (req, res) => {
   try {
     const contactId = req.params.id;

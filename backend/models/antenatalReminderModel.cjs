@@ -13,8 +13,8 @@ const AntenatalReminder = sequelize.define('antenatal_reminder', {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
-      model: User, // This is referencing the User model
-      key: 'id', // This is referencing the primary key (id) of the User model
+      model: User, 
+      key: 'id', 
     },
   },
   appointment_date: {
@@ -27,8 +27,8 @@ const AntenatalReminder = sequelize.define('antenatal_reminder', {
   },
 }, {
   tableName: 'antenatal_reminder',
-  timestamps: false, // If you want timestamps for created_at and updated_at columns
-  underscored: true, // Use snake_case for column names
+  timestamps: false, 
+  underscored: true, 
 });
 
 // Define association between AntenatalReminder and User models

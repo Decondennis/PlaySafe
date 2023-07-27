@@ -1,10 +1,7 @@
-// periodTrackerController.js
-
 const express = require('express');
 const router = express.Router();
 const PeriodTracker = require('../models/periodTrackerModel.cjs');
 
-// Create a new period tracker entry
 router.post('/period-trackers', async (req, res) => {
   try {
     const { user_id, type, lmd, result } = req.body;
@@ -16,7 +13,6 @@ router.post('/period-trackers', async (req, res) => {
   }
 });
 
-// Get all period tracker entries
 router.get('/period-trackers', async (req, res) => {
   try {
     const trackers = await PeriodTracker.findAll();
@@ -27,7 +23,6 @@ router.get('/period-trackers', async (req, res) => {
   }
 });
 
-// Get a single period tracker entry by ID
 router.get('/period-trackers/:id', async (req, res) => {
   try {
     const trackerId = req.params.id;
@@ -42,7 +37,6 @@ router.get('/period-trackers/:id', async (req, res) => {
   }
 });
 
-// Update a period tracker entry by ID
 router.put('/period-trackers/:id', async (req, res) => {
   try {
     const trackerId = req.params.id;
@@ -63,7 +57,7 @@ router.put('/period-trackers/:id', async (req, res) => {
   }
 });
 
-// Delete a period tracker entry by ID
+
 router.delete('/period-trackers/:id', async (req, res) => {
   try {
     const trackerId = req.params.id;

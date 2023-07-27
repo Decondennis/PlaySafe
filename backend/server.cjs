@@ -16,7 +16,6 @@ const medicalPersonelRouteRoute = require('./routes/medicalPersonelContactRoute.
 app.use(express.json());
 app.use(cors());
 
-// Use the controllers for routes related to different models
 app.use('/', usersController);
 app.use('/', remainderSettingsController);
 app.use('/', pregnancyTrackerController);
@@ -27,7 +26,7 @@ app.use('/', periodTrackerRoute);
 app.use('/', pregnancyTrackerRoute);
 app.use('/', medicalPersonelRouteRoute);
 
-// Sync the models with the database
+
 (async () => {
   try {
     await sequelize.sync();
@@ -37,9 +36,7 @@ app.use('/', medicalPersonelRouteRoute);
   }
 })();
 
-// ... (other routes) ...
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

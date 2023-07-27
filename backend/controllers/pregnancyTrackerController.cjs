@@ -1,10 +1,8 @@
-// pregnancyTrackerController.js
-
 const express = require('express');
 const router = express.Router();
 const PregnancyTracker = require('../models/pregnancyTrackerModel.cjs');
 
-// Create a new pregnancy tracker entry
+
 router.post('/pregnancy_tracker', async (req, res) => {
   console.log('Request Body:', req.body);
   try {
@@ -17,7 +15,7 @@ router.post('/pregnancy_tracker', async (req, res) => {
   }
 });
 
-// Get all pregnancy tracker entries
+
 router.get('/pregnancy_tracker', async (req, res) => {
   try {
     const trackers = await PregnancyTracker.findAll();
@@ -28,7 +26,7 @@ router.get('/pregnancy_tracker', async (req, res) => {
   }
 });
 
-// Get a single pregnancy tracker entry by ID
+
 router.get('/pregnancy_tracker/:id', async (req, res) => {
   try {
     const trackerId = req.params.id;
@@ -43,7 +41,7 @@ router.get('/pregnancy_tracker/:id', async (req, res) => {
   }
 });
 
-// Update a pregnancy tracker entry by ID
+
 router.put('/pregnancy_tracker/:id', async (req, res) => {
   try {
     const trackerId = req.params.id;
@@ -63,7 +61,7 @@ router.put('/pregnancy_tracker/:id', async (req, res) => {
   }
 });
 
-// Delete a pregnancy tracker entry by ID
+
 router.delete('/pregnancy_tracker/:id', async (req, res) => {
   try {
     const trackerId = req.params.id;

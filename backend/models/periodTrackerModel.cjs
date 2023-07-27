@@ -1,5 +1,3 @@
-// periodTracker.js
-
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.cjs');
 const User = require('../models/userModel.cjs');
@@ -15,8 +13,8 @@ const PeriodTracker = sequelize.define('period_tracker', {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
-      model: User, // This is referencing the User model
-      key: 'id', // This is referencing the primary key (id) of the User model
+      model: User, 
+      key: 'id', 
     },
   },
   type: {
@@ -33,8 +31,8 @@ const PeriodTracker = sequelize.define('period_tracker', {
   },
 }, {
   tableName: 'period_tracker',
-  timestamps: false, // If you want timestamps for created_at and updated_at columns
-  underscored: true, // Use snake_case for column names
+  timestamps: false, 
+  underscored: true, 
 });
 
 // Define association between PeriodTracker and User models
